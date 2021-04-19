@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="times" routerLinkActive="active" class="nav-link active"> Times</a>
+        </li>
+        <li class="nav-item"> 
+          <a routerLink="jogadores" routerLinkActive="active" class="nav-link active"> Jogadores</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav" dropdown>
+        <li class="nav-item dropdown">
+          <a class="btn btn-secondary dropdown-toggle" dropdownToggle id="navbarDropdownMenuLink" style="cursor:pointer"
+          role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <li><a class="dropdown-item" href="#">Sair</a></li>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>

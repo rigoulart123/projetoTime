@@ -1,0 +1,36 @@
+<h1>{{titulo}}</h1> 
+<div *ngIf="timeSelecionado"> 
+  time selecionado: {{timeSelecionado}}
+ <!--  <button class="btn btn-default" click()="voltar">Voltar</button> -->
+
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Example label</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Another label</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+</div>
+</div>
+
+<div *ngIf="!timeSelecionado">
+  nenhum time selecionado
+</div>
+
+<table class="table caption-top">
+    <caption>Times</caption>
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Estado</th>       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let time of times" style="cursor: pointer;" (click)="timeSelected(time)">
+        <th scope="row">{{time.id}}</th>
+        <td>{{time.nome}}</td>
+        <td>{{time.estado}}</td>
+      </tr>
+    </tbody>
+  </table>
